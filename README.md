@@ -5,6 +5,7 @@ To use this repo you need [Foundry installed on your system](https://book.getfou
 ```bash
 git clone https://github.com/luloxi/uniswap-v4-take-profits.git
 forge install
+forge test
 ```
 
 ## About
