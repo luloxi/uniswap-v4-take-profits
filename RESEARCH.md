@@ -1,4 +1,4 @@
-Introduction:
+# Introduction:
 
 - [Alice Henshaw & Sara Reynolds - Introducing Uniswap v4](https://www.youtube.com/watch?v=1P6d__HUd2s)
 - [Uniswap 🛠 Introduction to Uniswap V4](https://www.youtube.com/watch?v=eI-rXyWcG2M)
@@ -7,13 +7,12 @@ V4 is not deployed yet, but there is a testnet called [Conduit Testnet](https://
 
 [v4-core](https://github.com/Uniswap/v4-core/tree/main) and tutorials on [Uniswap V4 Documentation](https://docs.uniswapfoundation.org/) are made using Foundry (maybe we should consider switching from Hardhat to Foundry)
 
-If we're gonna keep using Hardhat, we should [set it up for EIP 1153 opcodes](https://docs.uniswapfoundation.org/getting-started/setting-up-your-environment/using-hardhat-with-eip-1153)
+To use Hardhat, you should [set it up for EIP 1153 opcodes](https://docs.uniswapfoundation.org/getting-started/setting-up-your-environment/using-hardhat-with-eip-1153)
 
-I've watched and coded along this lesson, although I don't think I've grasped it all the math yet:
+I've watched and coded along this lesson, although I don't think I've grasped all the math:
 
 - [Uniswap v4: Create your own on-chain limit orders hook for Uniswap using Foundry and Solidity](https://www.youtube.com/watch?v=lU8nJ4hViws)
 - [^ text version on LearnWeb3](https://learnweb3.io/lessons/uniswap-v4-hooks-create-a-fully-on-chain-take-profit-orders-hook-on-uniswap-v4)
-- [^ repo I've done following this lesson and updating it to use the latest v4-core](https://github.com/luloxi/uniswap-v4-take-profits)
 
 Here are some links I'm thinking of exploring next:
 

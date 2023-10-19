@@ -1,4 +1,19 @@
-# Ticks
+# Uniswap V4 take profits hook
+
+To use this repo you need [Foundry installed on your system](https://book.getfoundry.sh/getting-started/installation), and then run:
+
+```bash
+git clone https://github.com/luloxi/uniswap-v4-take-profits.git
+forge install
+```
+
+## About
+
+Repo made following [this lesson](https://www.youtube.com/watch?v=lU8nJ4hViws) and updating it to use the [latest v4-core](https://github.com/Uniswap/v4-core/tree/main)
+
+[Here are the research links](./RESEARCH.md) on Uniswap V4 I've collected so far
+
+## Ticks
 
 Solidity cannot support floating-point numbers. 0.1)
 
@@ -6,7 +21,7 @@ Ticks -> Represent token prices of a pair
 
 Conceptually: a tick is the smallest amount possible by which the price of an asset can move up or down
 
-## Getting a price using ticks
+### Getting a price using ticks
 
 Formula for getting the price of a token is:
 
@@ -27,14 +42,14 @@ price(i = -50) = 1.0001 ^ (-50) = 0.9950127279
 
 1 Token A = 0.9950127279 Token B
 
-## Second example
+### Second example
 
 If actual tick = 0.6 for example
 Ticks are spaced at intervals of 1
 
 We round the actual tick to either `tickLower` or `tickUpper` 0 and 1 respectively
 
-# sqrtPriceLimitX96
+## sqrtPriceLimitX96
 
 Uniswap uses something called **Q Notation**
 
@@ -58,11 +73,11 @@ You can't store 1.000234 in Solidity, and if you have to round this, it'll round
 
 V \* (2 ^ 96) = 7.9246702e+28 = 79246702000000000000000000000 (uint160)
 
-`swqrPriceX96` is the Q Notation value for the Square Root of the Price (right now)
+`sqrtPriceX96` is the Q Notation value for the Square Root of the Price (right now)
 
 To calculate the price: Price(i=currentTick) = 1.0001 ^ i
 
-sqrtPriceX95 = (sqrt(Price)) \* (2^96)
+sqrtPriceX96 = (sqrt(Price)) \* (2^96)
 
 `sqrtPriceLimitX96` specifies a LIMIT on the price ratio.
 
